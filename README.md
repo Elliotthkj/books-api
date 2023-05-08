@@ -7,7 +7,7 @@ npm init -y
 npm i
 npm start
 npm i express dotenv
-touch .env    // add PORT=3000
+echo "PORT=3000" > .env
 echo "node_modules/" > .gitignore
 git init
 git add .
@@ -15,3 +15,4 @@ git commit -m "Initial commit"
 git remote add origin <github-repo-url>
 git push -u origin master
 
+npm i body-parser

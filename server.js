@@ -5,6 +5,12 @@ require("dotenv").config();
 const port = 3000;
 const uri = process.env.MONGO_URI;
 
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+
+const cors = require("cors");
+app.use(cors());
+
 // Import the books controller
 const booksController = require("./controller/books_controller.js");
 app.use("/books", booksController);
