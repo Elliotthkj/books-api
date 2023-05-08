@@ -16,3 +16,4 @@ git remote add origin <github-repo-url>
 git push -u origin master
 
 npm i body-parser
+npm i cors
