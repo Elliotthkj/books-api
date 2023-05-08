@@ -7,6 +7,7 @@ const uri = process.env.MONGO_URI;
 
 // Import the books controller
 const booksController = require("./controller/books_controller.js");
+app.use("/books", booksController);
 
 // middleware
 app.use(express.json());
@@ -20,7 +21,6 @@ connection.once("open", () => {
 });
 
 // Define the Express routes and start the server
-
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
